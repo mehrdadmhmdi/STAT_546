@@ -1,0 +1,98 @@
+\documentclass{article}
+
+% PACKAGES
+\usepackage{amsmath,amsthm,amssymb,amsfonts,mathrsfs}
+\usepackage{mathabx}
+\usepackage{graphicx,psfrag,epsf}
+\usepackage{enumerate}
+\usepackage{natbib}
+\usepackage{url} % not crucial - just used below for the URL 
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true, linkcolor=purple,citecolor=purple]{hyperref} 
+\usepackage{upgreek}
+\usepackage{scalerel}
+\usepackage{booktabs}
+\usepackage{lscape}
+\usepackage{relsize,exscale}
+% \usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{cite}
+\usepackage{url} 
+\usepackage[shortlabels]{enumitem}
+\usepackage{soul}
+\usepackage{bbold}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{listings}
+\definecolor{codegray}{gray}{0.95}
+\captionsetup{width=1.1\textwidth, font=small,skip=0.1pt}
+\lstset{
+  backgroundcolor=\color{codegray},
+  basicstyle=\ttfamily\small,
+  frame=single,
+  framerule=0pt,
+  rulecolor=\color{black!20},
+  columns=fullflexible
+}
+
+
+
+
+% DOCUMENT INFORMATION
+\title{STAT 546 Project (Fall 2025)}
+\author{Instructor: Ruoqing Zhu}
+\date{TA: Mehrdad Mohammadi}
+
+\begin{document}
+
+\maketitle
+\section{Instruction}
+\subsection{Data Link}
+The data is available at \url{https://github.com/mehrdadmhmdi/546_project.git}. 
+You can either download the ZIP (no Git) or  clone with Git:
+\begin{lstlisting}
+# install git first if needed
+git clone https://github.com/mehrdadmhmdi/546_project.git
+cd 546_project
+\end{lstlisting}
+\section{Data Dictionary}
+\begin{table}[H]
+\centering
+\caption{Expedia Hotel Search Data Dictionary}
+\label{tab:expedia_data}
+\begin{tabular}{@{}llp{9.5cm}@{}}
+\hline\hline
+\textbf{Variable Name} & \textbf{Type} & \textbf{Description} \\ \hline
+\texttt{prop\_id} & Integer & The ID of the hotel \\
+\texttt{time\_idx} &Integer & Time index of the search\\
+\texttt{srch\_destination\_id} & Integer &  ID of the search Destination area \\
+\underline{\textbf{State Variables}}\\
+\texttt{srch\_length\_of\_stay} & Integer & Number of nights searched \\
+\texttt{srch\_room\_count} & Integer & Number of hotel rooms specified \\
+\texttt{srch\_saturday\_night\_bool} & Integer & +1 if stay includes Saturday night, else 0 \\
+\texttt{prop\_location\_score1} & Float & First score for location desirability \\
+\texttt{prop\_location\_score2} & Float & Second score for location desirability \\
+\texttt{prop\_log\_historical\_price} & Float & Log of mean historical price; 0 if unsold last period \\
+\texttt{prop\_starrating} & Integer & Hotel star rating (3–4) \\
+\texttt{prop\_review\_score} & Float & Mean customer review score (1–5) \\
+\texttt{random\_bool} & Integer & +1 if search results sorted randomly; 0 if normal order \\
+\texttt{comp\_rate} & Integer & +1 if Expedia cheaper; 0 if same; -1 if more expensive\\
+\texttt{comp\_inv} & Integer & +1 if competitor unavailable; 0 if both available\\
+\underline{\textbf{Action Variables}}\\
+\texttt{position} & Integer & Hotel position on Expedia search results page  \\
+\texttt{price\_usd} & Float & Displayed price of the hotel (per night or stay) \\
+\texttt{promotion\_flag} & Integer & +1 if hotel had a sale price promotion \\
+\underline{\textbf{Reward Variables}}\\
+\texttt{gross\_booking\_usd} & Float & Total transaction value (may differ from price\_usd) \\
+\texttt{click\_bool } & Integer &  +1 if search results in click; 0 if not   \\
+\texttt{booking\_bool } & Integer & +1 if search results in booking; 0 if not \\
+\hline\hline
+\end{tabular}
+\end{table}
+
+\end{document}
