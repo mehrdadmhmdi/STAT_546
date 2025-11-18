@@ -2,7 +2,7 @@
 ## What This Data Is and How We Restructure It
 
 The raw Expedia Hotel Search data records **what a user saw on a search results page** on Expedia.  
-Each time a user performs a search (`srch_id`), Expedia shows a **list of hotels**, and the raw dataset contains **one row per *property shown* in that list**.  
+In the raw files ([available here](https://www.kaggle.com/competitions/expedia-personalized-sort/)), each time a user performs a search (`srch_id`), Expedia shows a **list of hotels**, and the raw dataset contains **one row per *property shown* in that list**.  
 
 So at the raw level:
 
