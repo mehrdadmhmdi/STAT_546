@@ -98,7 +98,7 @@ Each destination (`srch_destination_id`) forms a small longitudinal trajectory i
 | `corr_pos_price`         | Float     | Within-list Pearson correlation between `position` (rank in search results) and `price_usd`        |
 | `corr_pos_review`        | Float     | Within-list Pearson correlation between `position` and `prop_review_score`                         |
 | `gross_revenue_per_night`| Float     | `total_gross_revenue` divided by `srch_length_of_stay`; search-level revenue normalized by LOS     |
-| `_split`                 | Categorical | Split label: `"train"`, `"sample"`, or `"test"`, based on destination-level group-pure partition |
+| `_split`                 | Categorical | Split label: `"train"`,  or `"test"`, based on destination-level group-pure partition |
 
 Conceptually, `gross_revenue_per_night` and `total_clicks` are the main **reward signals**,  
 while `total_promotions`, `avg_price_per_night`, `corr_pos_price`, and `corr_pos_review` summarize the **action-like list configuration**, and all remaining variables form the **state** of each time-indexed search.
