@@ -1,8 +1,3 @@
----
-title: "546 Data: Expedia Hotel Search"
-output: github_document
----
-
 # Data Access
 
 The data is available at:  
