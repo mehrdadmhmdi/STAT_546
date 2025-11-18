@@ -1,7 +1,7 @@
 # Data Access
 
 The data is available at:  
-<https://github.com/mehrdadmhmdi/546_project.git>
+<[https://github.com/mehrdadmhmdi/546_project.git](https://github.com/mehrdadmhmdi/STAT_546.git)>
 
 You can either download the ZIP (no Git) or clone with Git:
 
