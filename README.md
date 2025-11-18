@@ -7,8 +7,8 @@ You can either download the ZIP (no Git) or clone with Git:
 
 ```bash
 # install git first if needed
-git clone https://github.com/mehrdadmhmdi/546_project.git
-cd 546_project
+git clone https://github.com/mehrdadmhmdi/STAT_546.git
+cd STAT_546
 ```
 
 # Data Dictionary
