@@ -36,6 +36,26 @@ This is the format required for downstream **longitudinal modeling and RL-style 
 
 ## Is this a MDP setting?
 
+We can do (did) the following on the data to test the MDP setting:
+
+1. Estimated lag-(k) autocorrelations  and tests.
+2. Compared models for $\mathbb{E}[R_t |  A_t]$ vs  $E[R_t | S_t, A_t]$. So we can compare Bandit vs MDP 
+3. Compared $E[S_{t+1} | S_t,A_t])$ vs  $E[S_{t+1} | S_t, A_t, S_{t-1}, A_{t-1}]$. Markov property
+
+4. Used feature importance in E[R_t |  S_t,A_t]) to quantify the influence of each state/action dimension. 
+
+
+I think we can conclude the following from the plots:
+
+Autocorrelations show weak but real temporal structure.
+
+ Predicting reward improves when adding states
+
+Predicting next states depends on previous states/actions
+It is not strictly Markov, but somehow Markov. I think removing some variables we can restore strictly markov too.  
+
+
+I think we can safely conclude that this is offline RL (MDP) problem, not a bandit.
 ---
 
 ## Data Dictionary , ID, State, Action, Reward
