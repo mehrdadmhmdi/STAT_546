@@ -62,8 +62,6 @@ From the result (*you may try on your own*), we concluded the following:
 
 | Stage / File                  | Description                                                | Rows     | Columns | Notes                                                                                   |
 |------------------------------|------------------------------------------------------------|----------|---------|-----------------------------------------------------------------------------------------|
-| Raw Expedia CSV (`train.csv`) | Original Expedia search logs, one row per property shown  | 9,917,530 | 54      | Full click/booking logs plus many auxiliary variables                                  |
-| Row-level RL table (`df_rl`) | Cleaned property-level data, RL-relevant columns only     | 9,917,530 | 40      | After type fixing, mild filtering, and competitor feature construction                 |
 | List-level MDP: train        | Training split (destinations)                             | 222,711  | 26      | 6,936 distinct `srch_destination_id`                                                    |
 | List-level MDP: test         | Test split                                                | 98,179   | 26      | 3,002 distinct `srch_destination_id`                                                    |
 
